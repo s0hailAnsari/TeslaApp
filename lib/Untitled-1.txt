@@ -1,0 +1,44 @@
+import 'package:flutter/material.dart';
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final carsModels = ['S class', 'Model 3', 'Roadster', 'Trucks'];
+    final icons = [
+      Icons.directions_subway,
+      Icons.directions_boat,
+      Icons.directions_bus,
+      Icons.directions_car
+    ];
+    
+
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Tesla',
+      home: Scaffold(
+        backgroundColor: Colors.black,
+          appBar: AppBar(
+            centerTitle: true,
+            backgroundColor: Colors.red[800],
+            title: Text('Tesla'),
+          ),
+          body: ListView.builder(
+            itemCount: carsModels.length,
+            itemBuilder: (context, index) {
+              return Card(
+                    margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 20.0),
+                    child: ListTile(
+                      // contentPadding: EdgeInsets.all(20),
+                      leading: Image.asset('assets/images/modelS.png'),
+                      //Icon(icons[index]),
+                      title: Center(child: Text(carsModels[index])),
+                    ),
+                  ),
+                );
+            },
+          )),
+    );
+  }
+}
