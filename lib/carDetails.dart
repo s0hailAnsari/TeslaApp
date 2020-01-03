@@ -1,5 +1,4 @@
 import 'package:car_carousel/model/car.dart';
-import 'package:car_carousel/model/feature.dart';
 import 'package:flutter/material.dart';
 import 'package:car_carousel/model/homepageModel.dart';
 

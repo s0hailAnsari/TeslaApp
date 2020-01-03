@@ -43,21 +43,21 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  assets:
-   - assets/images/ts2015.png
-   - assets/images/ts2016.png
-   - assets/images/ts2017.png
-   - assets/images/ts2018.png
-   - assets/images/ts2019.png
-   - assets/images/tx2016.png
-   - assets/images/tx2017.png
-   - assets/images/tx2018.png
-   - assets/images/tx2019.png
-   - assets/images/roadster2019.jpg
-   - assets/images/roadster2020.jpg
-   - assets/images/cybertruck.jpg
-   - assets/images/image.png
-   - assets/images/black2015TMS.jfif
+  # assets:
+  #  - assets/images/ts2015.png
+  #  - assets/images/ts2016.png
+  #  - assets/images/ts2017.png
+  #  - assets/images/ts2018.png
+  #  - assets/images/ts2019.png
+  #  - assets/images/tx2016.png
+  #  - assets/images/tx2017.png
+  #  - assets/images/tx2018.png
+  #  - assets/images/tx2019.png
+  #  - assets/images/roadster2019.jpg
+  #  - assets/images/roadster2020.jpg
+  #  - assets/images/cybertruck.jpg
+  #  - assets/images/image.png
+  #  - assets/images/black2015TMS.jfif
 
 module:
   androidX: true
