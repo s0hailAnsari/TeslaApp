@@ -1,6 +1,7 @@
 import 'package:car_carousel/model/car.dart';
 import 'package:flutter/material.dart';
 import 'package:car_carousel/model/homepageModel.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class ShowCarDetails extends StatefulWidget {
   final Car modelYearC;
@@ -137,19 +138,44 @@ class _ShowCarDetailsState extends State<ShowCarDetails> {
                 floating: true,
                 pinned: true,
                 flexibleSpace: FlexibleSpaceBar(
-                    centerTitle: true,
-                    title: Text(
-                        widget.carModelC.carModel +
-                            " " +
-                            widget.modelYearC.features.releasedYear.toString(),
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16.0,
-                        )),
-                    background: Image.network(
-                      currentImage,
-                      fit: BoxFit.fill,
-                    )),
+                  centerTitle: true,
+                  title: Text(
+                      widget.carModelC.carModel +
+                          " " +
+                          widget.modelYearC.features.releasedYear.toString(),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16.0,
+                      )),
+                  background: //Image(
+                      CachedNetworkImage(
+                    imageUrl: currentImage,
+                    imageBuilder: (context, imageProvider) => Container(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: imageProvider,
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                    ),
+                    placeholder: (context, url) => Container(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 90, horizontal: 183),
+                        child: SizedBox(
+                          child: CircularProgressIndicator(),
+                          height: 10.0,
+                          width: 10.0,
+                        ),
+                      ),
+                    ),
+                    errorWidget: (context, url, error) => Icon(Icons.error),
+                    // placeholder: (context, url) =>
+                    //     CircularProgressIndicator(),
+                    // errorWidget: (context, url, error) => Icon(Icons.error),
+                  ), // currentImage,
+                  // fit: BoxFit.fill,
+                ),
               ),
               SliverPersistentHeader(
                 delegate: _SliverAppBarDelegate(

@@ -15,7 +15,7 @@ void main() {
       title: "TESLA",
       // home: MyApp(),
       home: new SplashScreen(
-          seconds: 7,
+          seconds: 3,
           navigateAfterSeconds: new MyApp(),
           // title: new Text(
           //   'Welcome In SplashScreen',
