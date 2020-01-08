@@ -26,10 +26,12 @@ class ShowCarModels extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => ShowCarDetails(
-                              modelYearC: carModel.car[index],
-                              // ShowCarDetails(
-                              carModelC: carModel)),
+                        builder: (context) => ShowCarDetails(
+                          modelYearC: carModel.car[index],
+                          // ShowCarDetails(
+                          carModelC: carModel,
+                        ),
+                      ),
                       // carModel.car[index].features)),
                     );
                   },
@@ -96,34 +98,33 @@ class ShowCarModels extends StatelessWidget {
                               // child: Padding(
                               //   padding:
                               //       const EdgeInsets.symmetric(vertical: 10.0),
-                                // child: new ListView.builder(
-                                // itemCount: carModel.car.length,
-                                // itemBuilder:
-                                // (BuildContext ctxt, int index2) =>
-                                child: Center(
-                                  // child: Container(
-                                  child: Text(
-                                    "Released year  : " +
-                                        carModel
-                                            .car[index].features.releasedYear
-                                            .toString() +
-                                        "\n0 - 60                 : " +
-                                        carModel.car[index].features.s060
-                                            .toString() +
-                                        "\nRange               : " +
-                                        carModel.car[index].features.range
-                                            .toString() +
-                                        "\nStorage             : " +
-                                        carModel.car[index].features.storage
-                                            .toString(),
-                                    // carModel.car[index].features.releasedYear,
-                                    // carModel.car[index].features.runtimeType,
-                                    // carModel.car[index].features.s060,
-                                    style: TextStyle(fontSize: 15),
-                                  ),
+                              // child: new ListView.builder(
+                              // itemCount: carModel.car.length,
+                              // itemBuilder:
+                              // (BuildContext ctxt, int index2) =>
+                              child: Center(
+                                // child: Container(
+                                child: Text(
+                                  "Released year  : " +
+                                      carModel.car[index].features.releasedYear
+                                          .toString() +
+                                      "\n0 - 60                 : " +
+                                      carModel.car[index].features.s060
+                                          .toString() +
+                                      "\nRange               : " +
+                                      carModel.car[index].features.range
+                                          .toString() +
+                                      "\nStorage             : " +
+                                      carModel.car[index].features.storage
+                                          .toString(),
+                                  // carModel.car[index].features.releasedYear,
+                                  // carModel.car[index].features.runtimeType,
+                                  // carModel.car[index].features.s060,
+                                  style: TextStyle(fontSize: 15),
                                 ),
-                                // ),
-                                // ),
+                              ),
+                              // ),
+                              // ),
                               // ),
                               // child: Text(
                               //   carModel.features[index],

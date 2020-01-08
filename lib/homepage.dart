@@ -52,8 +52,10 @@ class MyApp extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (_model) => ShowCarModels(
-                              carModel: CarModel.carcarmodelsList[index])),
+                        builder: (_model) => ShowCarModels(
+                          carModel: CarModel.carcarmodelsList[index],
+                        ),
+                      ),
                     );
                   },
                 ),

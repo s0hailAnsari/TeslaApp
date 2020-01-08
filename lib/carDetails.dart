@@ -202,7 +202,7 @@ class _ShowCarDetailsState extends State<ShowCarDetails> {
                   cardDesign("Engine :", widget.modelYearC.features.engine),
                   cardDesign("Transmission :",
                       widget.modelYearC.features.transmission),
-                  cardDesignMain("POWERTRAIN :"),
+                  cardDesignMain("POWERTRAIN"),
                   cardDesign("Fuel Type :",
                       widget.modelYearC.features.recommendedFuelType),
                   cardDesign("Exhaust :", widget.modelYearC.features.exhaust),
@@ -268,7 +268,8 @@ class _ShowCarDetailsState extends State<ShowCarDetails> {
                         setState(
                           () {
                             currentImage = getImageFromValue(
-                                widget.modelYearC.carColor[index]);
+                              widget.modelYearC.carColor[index],
+                            );
                           },
                         );
                       },
@@ -277,12 +278,15 @@ class _ShowCarDetailsState extends State<ShowCarDetails> {
                           padding: const EdgeInsets.symmetric(vertical: 8.0),
                           child: CircleAvatar(
                             radius: 15.0,
-                            backgroundColor:
-                                Color(widget.modelYearC.carColor[index]),
+                            backgroundColor: Color(
+                              widget.modelYearC.carColor[index],
+                            ),
                           ),
                         ),
                         title: Text(
-                          getColorFromValue(widget.modelYearC.carColor[index]),
+                          getColorFromValue(
+                            widget.modelYearC.carColor[index],
+                          ),
                         ),
                       ),
                     ),
